@@ -17,8 +17,7 @@ It reads code changes, generates meaningful commit messages following **Conventi
 
 - 🔍 Automatically detects changes using `git status` and `git diff`
 - 🧠 Generates concise, meaningful commit messages using AI  
-  - OpenAI (GPT-4 / GPT-3.5)
-  - Ollama (self-hosted models)
+  - OpenAI (GPT-4 / GPT-3.5 / can be changed to updated models)
 - ✅ Asks for confirmation before committing and pushing
 - 🧾 Follows **Conventional Commits** style
 - 🚀 Easy to run with a single command: `push-ai`
