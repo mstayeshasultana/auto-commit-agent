@@ -1,1 +1,1 @@
-# auto-commit-agent
+# AutoCommit Agent
