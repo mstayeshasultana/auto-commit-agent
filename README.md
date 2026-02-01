@@ -1,8 +1,12 @@
+# 🤖 AutoCommit Agent
+
+
+
 <img width="973" height="728" alt="image" src="https://github.com/user-attachments/assets/8a20be6f-ce34-417b-88ec-235836965a50" />
 
 
 
-# 🤖 AutoCommit Agent
+
 
 **AutoCommit Agent** is an AI-powered CLI tool that automates Git commits for **Dart / Flutter** projects.  
 It reads code changes, generates meaningful commit messages following **Conventional Commits**, and stages, commits, and pushes changes **after user confirmation**.
