@@ -1,4 +1,4 @@
-# 🤖 AutoCommit Agent
+# 🤖 AutoCommit Agentic AI
 
 
 
