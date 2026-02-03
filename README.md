@@ -1,4 +1,4 @@
-# 🧠 Git Commit Copilot Agent
+# 🧠 Auto_Commit Agentic AI
 
 An AI-powered agent that automates the Git commit workflow using GPT.  
 Built with **LangGraph**, **LangChain**, and the **Git CLI**, this agent generates meaningful commit messages by analyzing code changes, confirming with the user, and pushing to the repository.
