@@ -7,7 +7,7 @@ from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 
-os.environ["OPENAI_API_KEY"] = ""  # <-- put your key here
+os.environ["OPENAI_API_KEY"] = ""  # <-- put your OPENAI_API_KEY here
 
 # State 
 class GitState(TypedDict, total=False):
@@ -28,14 +28,14 @@ def check_status(_: GitState) -> GitState:
         ["git", "status", "--short"],
         capture_output=True,
         text=True,
-        encoding="utf-8",      # ✅ FIX: Windows encoding
-        errors="replace"       # ✅ FIX: Prevent Unicode crash
+        encoding="utf-8",      
+        errors="replace"       
     )
 
     status = (result.stdout or "").strip()
 
     if not status:
-        print("✅ No changes found.")
+        print("No changes found.")
         exit()
 
     print("🔍 Changes found:\n", status)
@@ -47,7 +47,7 @@ def get_diff(state: GitState) -> GitState:
         ["git", "diff"],
         capture_output=True,
         text=True,
-        encoding="utf-8",      # ✅ FIX: Windows encoding
+        encoding="utf-8",     
         errors="replace"
     )
 
@@ -85,8 +85,8 @@ Git Diff:
 
     message = response.content.strip()
 
-    print("🧠 Suggested Commit Message:")
-    print("➡️", message)
+    print("Suggested Commit Message:")
+    print("->", message)
 
     return {
         **state,
@@ -107,13 +107,13 @@ def commit_push(state: GitState) -> GitState:
     print("\n📌 Staging files...")
     subprocess.run(["git", "add", "."])
 
-    print("📝 Committing...")
+    print("Committing...")
     subprocess.run(["git", "commit", "-m", state["message"]])
 
-    print("🚀 Pushing...")
+    print("Pushing...")
     subprocess.run(["git", "push"])
 
-    print("\n🎉 SUCCESS! Changes pushed.")
+    print("\nSUCCESS! Changes pushed.")
     return state
 
 #  LangGraph Workflow
@@ -142,3 +142,4 @@ copilot_agent = graph.compile()
 
 #  Run Agent
 copilot_agent.invoke({})
+
