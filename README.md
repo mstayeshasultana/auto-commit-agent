@@ -8,6 +8,8 @@
 An AI-powered agent that automates the Git commit workflow using GPT.  
 Built with **LangGraph**, **LangChain**, and the **Git CLI**, this agent generates meaningful commit messages by analyzing code changes, confirming with the user, and pushing to the repository.
 
+*This Agent is specialized in Dart/Flutter project. But it can be used in other projects.*
+
 ---
 
 ## 🚀 Features
